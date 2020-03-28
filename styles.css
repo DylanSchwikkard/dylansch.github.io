@@ -89,6 +89,33 @@ h1{
     
 }
 
+
+.padding-div-50{
+    width: 100%;
+    padding-top: 50%;
+    background-color: red;
+    
+}
+
+.fullscreenContainer{
+    width: 100%;
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
 .cover-load-left{
     background-color: black;
     position: fixed;
@@ -141,8 +168,14 @@ h1{
         /* font-weight: 100; */    
     }
 
+    .list-2{
+        margin-top :-15px !important;
+    }
     
-    
+    .padding-top-mobile{
+        padding-top:59px;
+        
+    }
 
     .rounded-circle{
         max-width: 50%;
