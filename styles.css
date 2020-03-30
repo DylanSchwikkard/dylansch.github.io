@@ -234,10 +234,38 @@ h1{
 .row.project-tile{
     margin:0px;
 }
+.project-text{
+    display: none;
+    
+    
+    height:200px;
+    
+    width:100%;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    
+}
 
+.shrink-33{
+    animation: shrink 0.3s 1;
+}
+
+.visible-text{
+    
+    display: flex;
+    text-align: right;
+    align-items: center;
+    animation: fade-in 1.4s 1;
+    
+    
+
+}
 @media (max-width: 768px){
 
-    
+    .project-text{
+        height:auto;
+    }
     .visible-text{
         text-align: center !important;
     }
@@ -309,33 +337,7 @@ h1{
     
 
 }
-.project-text{
-    display: none;
-    
-    
-    height:200px;
-    min-width: 200px;
-    width:100%;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    
-}
 
-.shrink-33{
-    animation: shrink 0.3s 1;
-}
-
-.visible-text{
-    
-    display: flex;
-    text-align: right;
-    align-items: center;
-    animation: fade-in 1.4s 1;
-    
-    
-
-}
 
 /* Animations: */
 @keyframes inner-text-rise{
