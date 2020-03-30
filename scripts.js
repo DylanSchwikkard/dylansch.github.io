@@ -28,8 +28,19 @@ $(document).ready(function(){
 		 var i = id.substring(2);
 		 var mod = i % 3;
 		 
-		 if(mod == 1)
-		 {
+		 if(screen.width < 768){
+			if (first == false){
+				doMobile(i);
+			}
+			else{
+				undoMobile(i);
+			}
+			
+		}
+
+		 else if(mod == 1)
+		 {		
+			
 			if (first == false){				
 				doFirst(i);
 			}
@@ -65,7 +76,7 @@ $(document).ready(function(){
 			while(counter > i)
 			{
 				if(counter!=i){
-					console.log(counter);
+					
 					$('#pt' +counter).toggle();
 				}
 				counter=counter-1;
@@ -76,7 +87,7 @@ $(document).ready(function(){
 			while(counter > (i-2))
 			{
 				if(counter!=i){
-					console.log(counter);
+					
 					$('#pt' +counter).toggle();
 				}
 				counter=counter-1;
@@ -87,7 +98,7 @@ $(document).ready(function(){
 			while(counter > (i-3))
 			{
 				if(counter!=i){
-					console.log(counter);
+					
 					$('#pt' +counter).toggle();
 				}
 				counter=counter-1;
@@ -104,7 +115,7 @@ $(document).ready(function(){
 			{
 				
 				if(counter!=i){
-					console.log(counter, "Here");
+					
 					$('#pt' +counter).toggle();
 				}
 				counter=counter-1;
@@ -115,7 +126,7 @@ $(document).ready(function(){
 			while(counter > (i-2))
 			{
 				if(counter!=i){
-					console.log(counter);
+					
 					$('#pt' +counter).toggle();
 				}
 				counter=counter-1;
@@ -126,7 +137,7 @@ $(document).ready(function(){
 			while(counter > (i-3))
 			{
 				if(counter!=i){
-					console.log(counter);
+					
 					$('#pt' +counter).toggle();
 				}
 				counter=counter-1;
@@ -138,6 +149,7 @@ $(document).ready(function(){
 	function doFirst(i){
 		
 		var conWidth = screen.width - Math.round($('#pt1').offset().left) - Math.round($('#pt3').offset().right);
+		
 		 id = Number(i);
 		 var pos = Math.round($('#pt' + id).offset().left);
 		 positionLeft = Math.round($('#pt1').offset().left);
@@ -157,7 +169,7 @@ $(document).ready(function(){
 		setTimeout(function() {hidePrev(id);
 			
 		},500);
-		 console.log('#pt' + id);
+		
 		setTimeout(function (){$('#pt' + id).addClass('active-project');}, 700);
 		$('.project-text#protext'+i).addClass('visible-text');
 		setTimeout(function (){$('#pt' + id).addClass('row')}, 700);
@@ -177,10 +189,10 @@ $(document).ready(function(){
 		},500);
 			
 			
-	
-		showOthers(id);
+		setTimeout(function() {
+		showOthers(id);},500);
 		
-		 console.log("Gets here");
+		
 		setTimeout(function (){$('#pt' + id).removeClass('active-project');}, 0);
 		$('#pt' + id).addClass('shrink-33');
 		setTimeout(function (){$('#pt' + id).removeClass('row')}, 0);
@@ -195,7 +207,7 @@ $(document).ready(function(){
 		$('#pt' + id).addClass('shrink-33');
 		$('#pt' + id).removeClass('active-project');
 		$('.project-text#protext'+i).removeClass('visible-text');
-		console.log(middleLeft);
+		
 		id = Number(i);
 		setTimeout(function() {
 			id = Number(i);		
@@ -246,9 +258,9 @@ $(document).ready(function(){
 		 var pos = Math.round($('#pt' + id).offset().left);
 		 
 		 positionLeft = Math.round($('#pt1').offset().left);
-		 console.log("Position : " , pos, ", PositionLeft : " , positionLeft);
+		 
 		 rightLeft = pos-positionLeft;
-		 console.log(pos ,":", positionLeft);
+		
 
 			$('#pt' + (id-2)).animate({
 				left : "-=" + (pos-positionLeft) +"px",
@@ -272,7 +284,7 @@ $(document).ready(function(){
 				left : "+=" + (pos-positionLeft) +"px"
 			},0)
 		},500);
-		 console.log('#pt' + id);
+		
 		setTimeout(function (){$('#pt' + id).addClass('active-project');}, 700);
 		$('.project-text#protext'+i).addClass('visible-text');
 		setTimeout(function (){$('#pt' + id).addClass('row')}, 700);
@@ -285,7 +297,7 @@ $(document).ready(function(){
 		$('#pt' + id).addClass('shrink-33');
 		$('#pt' + id).removeClass('active-project');
 
-		console.log(middleLeft);
+		
 		id = Number(i);
 		setTimeout(function() {
 			id = Number(i);		
@@ -337,9 +349,9 @@ $(document).ready(function(){
 		 var pos = Math.round($('#pt' + id).offset().left);
 		 
 		 positionLeft = Math.round($('#pt1').offset().left);
-		 console.log("Position : " , pos, ", PositionLeft : " , positionLeft);
+		 
 		 middleLeft = pos-positionLeft;
-		 console.log(pos ,":", positionLeft);
+		
 
 			$('#pt' + (id-1)).animate({
 				left : "-=" + (pos-positionLeft) +"px",
@@ -363,7 +375,7 @@ $(document).ready(function(){
 				left : "+=" + (pos-positionLeft) +"px"
 			},0)
 		},500);
-		 console.log('#pt' + id);
+		
 		setTimeout(function (){$('#pt' + id).addClass('active-project');}, 700);
 		$('.project-text#protext'+i).addClass('visible-text');
 		setTimeout(function (){$('#pt' + id).addClass('row')}, 700);
@@ -377,4 +389,36 @@ $(document).ready(function(){
 		$('.navbar-collapse').collapse('hide');
 	});
 
+
+	function doMobile(i){
+		
+		 var id = Number(i);
+		 
+		 
+		
+		$("html, body").animate({ scrollTop: ($('#pt' + id).offset().top-59) },500);
+		setTimeout(function (){$('#pt' + id).addClass('active-project');}, 700);
+		$('.project-text#protext'+i).addClass('visible-text');
+		setTimeout(function (){$('#pt' + id).addClass('row')}, 700);
+		first = true;
+	}
+	function undoMobile(i){
+		var id = Number(i);
+		 
+		 
+		
+		
+		$('#pt' + id).removeClass('active-project');
+		
+		
+		setTimeout(function() { $('.project-text#protext'+i).removeClass('visible-text');
+								$('#pt' + id).removeClass('row');  }, 500)
+		$('#pt' + id).addClass('shrink-33');
+		setTimeout(function() { $('#pt' + id).removeClass('shrink-33')}, 500)
+		first = false;
+
+	}
+
+	
+	
 });

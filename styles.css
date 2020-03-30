@@ -10,11 +10,11 @@
 }
 
 .project-tile{
-    padding-top: 0px; background-color: red;
+    
     /* margin-bottom: 100px; */
     max-height: 200px;
     overflow: hidden;
-    /* display: block; */
+    
     
 }
 
@@ -29,12 +29,16 @@
 
 .active-project{
     
-    background-color: green;
-    animation: project-widen 2s 1;
+    display: flex;
+    align-items: center;
+    animation: project-widen 1s 1;
     max-width: 100% !important;
     flex: 0 0 100% !important;
 }
 
+.project-tile{
+    margin-bottom: 50px !important;
+}
 
 h1{
     font-family: Raleway;
@@ -111,10 +115,65 @@ h1{
     max-height: 100%;
 }
 
-.project-logo{
-    width:200px;
-    height:200px;
+.overlay-proj{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color: rgba(255,255,255,0);
+    
+    
 }
+
+.overlay-proj:hover{
+    animation: overlay-fade 0.8s 1;
+   
+    background-color: rgba(255,255,255,0.5);
+    
+}
+
+
+.overlay-proj:hover .overlay-inner-text{
+    animation: inner-text-rise 0.8s 1;
+    background-color: rgba(43, 43, 43, 0.664);
+    bottom: 0%;
+    
+}
+
+.overlay-inner-text{
+    
+    color:white;
+    width:100%;
+    position: absolute;
+    min-height:20%;
+    padding: 10px;
+    bottom: -50%;
+    text-align: center;
+
+}
+
+.project-logo{    
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid black;
+    position: relative;
+    
+}
+
+.img-proj-logo{
+    width:100%;
+    height:100%;
+}
+
+.p-logo-div{
+   
+   
+}
+
 .p-logo-div:hover{
     cursor: pointer;
 }
@@ -177,6 +236,12 @@ h1{
 }
 
 @media (max-width: 768px){
+
+    
+    .visible-text{
+        text-align: center !important;
+    }
+
     h1, .p-statement, .img-div-row{
         text-align: center;
        /* font-weight: 100;
@@ -212,9 +277,48 @@ h1{
         padding-top: 0px;
         margin-top: 0px;
    }
+
+   .active-project{
+        max-height: none;
+   }
+
+   
+    
+
+   .visible-text{
+        margin-left:1px;
+    }
+    @keyframes project-widen{
+        from{ 
+            max-height: 200px;
+        }
+        to{
+            max-height: 3000px;
+        }
+    }
+    @keyframes shrink{
+        from{ 
+            max-height: 3000px;     
+        }
+        
+        to{
+            max-height: 200px; 
+            
+        }
+    }
+    
+
 }
 .project-text{
     display: none;
+    
+    
+    height:200px;
+    min-width: 200px;
+    width:100%;
+    color: black;
+    padding: 20px;
+    text-align: center;
     
 }
 
@@ -224,14 +328,44 @@ h1{
 
 .visible-text{
     
-    display: block;
+    display: flex;
     text-align: right;
+    align-items: center;
+    animation: fade-in 1.4s 1;
     
     
 
 }
 
 /* Animations: */
+@keyframes inner-text-rise{
+    from { bottom:-25%}
+    to {bottom : 0%;}
+}
+
+@keyframes overlay-fade{
+    from {
+        opacity: 0;         
+    }
+     to {
+        opacity: 1;
+    }
+}
+
+@keyframes inner-text-fall{
+    from {bottom : 0%;}
+    to { bottom:-25%}
+}
+
+@keyframes overlay-leave{
+    from {
+        opacity: 1;         
+    }
+     to {
+        opacity: 0;
+    }
+}
+
 @keyframes load-left{
     from {
        opacity: 0.5;
@@ -247,17 +381,22 @@ h1{
    }
 }
 
-@keyframes shrink{
-    from{ 
-        flex: 0 0 100.333333%;
-        max-width: 100%;        
-    }
-    to{
-        flex: 0 0 33.333333%;
-        max-width: 33%;
-        
-    }
+@keyframes fade-in{
+        0% {
+           opacity: 0;
+           
+       }
+        90% {
+           opacity: 0.1;
+            
+       }
+       100%{
+           opacity: 1;
+       }
+    
 }
+
+
 
 @keyframes load-right{
     from {
@@ -284,7 +423,7 @@ h1{
 @keyframes img-animate{
     from {
        opacity: 1;
-        margin-left: margin-left: 40%;
+        margin-left:  40%;
        width:20%;
    }
     to {
@@ -294,13 +433,28 @@ h1{
    }
 }
 
-@keyframes project-widen{
-    from{ 
-        flex: 0 0 33.333333%;
-        max-width: 33%;
+@media (min-width: 768px){
+
+    @keyframes project-widen{
+        from{ 
+            flex: 0 0 33.333333%;
+            max-width: 33%;
+        }
+        to{
+            flex: 0 0 100.333333%;
+            max-width: 100%;
+        }
     }
-    to{
-        flex: 0 0 100.333333%;
-        max-width: 100%;
+
+    @keyframes shrink{
+        from{ 
+            flex: 0 0 100.333333%;
+            max-width: 100%;        
+        }
+        to{
+            flex: 0 0 33.333333%;
+            max-width: 33%;
+            
+        }
     }
 }
