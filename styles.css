@@ -35,6 +35,9 @@
     flex: 0 0 100% !important;
 }
 
+.project-tile{
+    margin-bottom: 50px !important;
+}
 
 h1{
     font-family: Raleway;
@@ -212,6 +215,39 @@ h1{
         padding-top: 0px;
         margin-top: 0px;
    }
+
+   .active-project{
+        max-height: none;
+   }
+
+   
+    .shrink-33{
+        animation: shrink 0.5s 1 !important;
+    }
+
+   .visible-text{
+        margin-left:1px;
+    }
+    @keyframes project-widen{
+        from{ 
+            max-height: 200px;
+        }
+        to{
+            max-height: 3000px;
+        }
+    }
+    @keyframes shrink{
+        from{ 
+            max-height: 3000px;     
+        }
+        
+        to{
+            max-height: 200px; 
+            
+        }
+    }
+    
+
 }
 .project-text{
     display: none;
@@ -247,17 +283,7 @@ h1{
    }
 }
 
-@keyframes shrink{
-    from{ 
-        flex: 0 0 100.333333%;
-        max-width: 100%;        
-    }
-    to{
-        flex: 0 0 33.333333%;
-        max-width: 33%;
-        
-    }
-}
+
 
 @keyframes load-right{
     from {
@@ -284,7 +310,7 @@ h1{
 @keyframes img-animate{
     from {
        opacity: 1;
-        margin-left: margin-left: 40%;
+        margin-left:  40%;
        width:20%;
    }
     to {
@@ -294,13 +320,28 @@ h1{
    }
 }
 
-@keyframes project-widen{
-    from{ 
-        flex: 0 0 33.333333%;
-        max-width: 33%;
+@media (min-width: 768px){
+
+    @keyframes project-widen{
+        from{ 
+            flex: 0 0 33.333333%;
+            max-width: 33%;
+        }
+        to{
+            flex: 0 0 100.333333%;
+            max-width: 100%;
+        }
     }
-    to{
-        flex: 0 0 100.333333%;
-        max-width: 100%;
+
+    @keyframes shrink{
+        from{ 
+            flex: 0 0 100.333333%;
+            max-width: 100%;        
+        }
+        to{
+            flex: 0 0 33.333333%;
+            max-width: 33%;
+            
+        }
     }
 }
