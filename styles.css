@@ -1,3 +1,19 @@
+.test{
+    
+    height: 100vh;
+    width:100vw;
+    background-color: green;
+}
+
+
+.fullscreencontainer{
+    
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
 h1{
     font-family: Raleway;
     padding-bottom: 20px;
@@ -18,10 +34,23 @@ h1{
     background-color: white;
 }
 
+.img-div-row{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
 .skills{
     font-family: Raleway;
     font-weight: 300;
     
+}
+
+.raleway-font{
+    font-family: Raleway;
+    font-weight: 300;
 }
 
 .font-raleway.nav-item.nav-link{
@@ -74,6 +103,11 @@ h1{
     background-color: black;
 }
 
+.edu-logo{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .jumbotron{
     background-color: blue;
 }
@@ -97,23 +131,6 @@ h1{
     
 }
 
-.fullscreenContainer{
-    width: 100%;
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
 
 
 .cover-load-left{
@@ -163,7 +180,12 @@ h1{
 }
 
 @media (max-width: 768px){
-    h1, .p-statement, .skills{
+   
+
+    
+
+
+    h1, .p-statement, .img-div-row{
          text-align: center;
         /* font-weight: 100; */    
     }
@@ -172,9 +194,18 @@ h1{
         margin-top :-15px !important;
     }
     
-    .padding-top-mobile{
+    .padding-navbar-mobile{
         padding-top:59px;
-        
+
+    }
+
+    .padding-10-mobile{
+        padding-top:10%;
+    }
+
+    .navbar-light .navbar-toggler {
+        border: 0px;
+        border-radius: 10px;
     }
 
     .rounded-circle{
