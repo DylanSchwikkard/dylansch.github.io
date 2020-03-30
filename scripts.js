@@ -192,7 +192,7 @@ $(document).ready(function(){
 
 	function undoMiddle(i){
 		$('#pt' + id).removeClass('row');
-		$('#pt' + id).removeClass('shrink-33');
+		$('#pt' + id).addClass('shrink-33');
 		$('#pt' + id).removeClass('active-project');
 		$('.project-text#protext'+i).removeClass('visible-text');
 		console.log(middleLeft);
