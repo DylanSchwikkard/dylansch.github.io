@@ -1,139 +1,175 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,300,400,400i,700,700i&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="cover-load-left"></div>
-        <div class="cover-load-right"></div>
-        <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top">
-            
-            <a href="#" class="navbar-brand">
-                <img src="images/logo.png" height="30" alt="DS">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a id="profile-link" href="#Profile" class="font-raleway nav-item nav-link">Profile</a>
-                    <a id="skill-link" href="#Skills" class="font-raleway nav-item nav-link">Skills</a>
-                    <a id="edu-link" href="#Education" class="font-raleway nav-item nav-link">Education History</a>
-                    <a href="#" class="font-raleway nav-item nav-link">Projects</a>                    
-                </div>
-                
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,300,400,400i,700,700i&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <div class="cover-load-left"></div>
+    <div class="cover-load-right"></div> -->
+    <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top">
+
+        <a href="#" class="navbar-brand">
+            <img src="images/logo.png" height="30" alt="DS">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a id="profile-link" href="#Profile" class="font-raleway nav-item nav-link">Profile</a>
+                <a id="skill-link" href="#Skills" class="font-raleway nav-item nav-link">Skills</a>
+                <a id="edu-link" href="#Education" class="font-raleway nav-item nav-link">Education History</a>
+                <a id="project-link" href="#Projects" class="font-raleway nav-item nav-link">Projects</a>
             </div>
-        </nav>
-        
-        <!-- <div class="logo-fade">
+
+        </div>
+    </nav>
+
+    <!-- <div class="logo-fade">
             <img src="images/logo.png" class="img-logo" alt="">
-        </div> -->      
-        
-        <div id="Profile">
-            
-            <div class="padding-navbar-mobile"></div>
-            <div class="container fullscreencontainer">
-                
-                
-                <div class="row">
-                    <div class="col-lg-2 col-md-4 col-sm-8 col-xs-8 offset-lg-0 offset-md-0 offset-sm-2 offset-xs-2">
-                        <img src="images/profile.jpg" id="pLogo" class="img-responsive rounded-circle float-left" alt="">
-                        
-                        <!-- <div class="padding-div-10"></div> -->
-                    </div>
-                    
-                    <div class="col-lg-10 col-md-8 col-sm-12 col-xs-12">
-                        <h1>Dylan Schwikkard</h1>
-                        <div class="p-statement">As a recent Computer Science graduate from university, I am looking to start my career in software development. I have experience in various languages and technologies and am eager to learn more. I have mostly worked with front end technologies but have also touch on back end.</div>
-                    </div>
-                    
-                    
-                    
-                </div>
-                
-            </div>
-            <div class=" container padding-10-mobile border-bottom"></div>
-            
-        </div>
-        <div id="Skills" class="container" >
-            
-            <div id="Skills" class="padding-div-10"></div>
-            <div class="row small-bottom-margin">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    
-                    <h1>Skills</h1> 
-                    <div class="p-statement" style="padding-bottom: 10px;">These are a few of and what I consider my most valuable skills at this point in time.</div>                 
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding">
-                    <ul class="skills">
-                        <li>Angular</li>
-                        <li>Flutter</li>
-                        <li>Java</li> 
-                        <li>C++</li>                       
-                        <li>PHP</li>
-                        <li>Firebase</li>
-                    </ul>                    
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding list-2">
-                    <ul class="skills">
-                        <li>SQL Databases</li>
-                        <li>NoSQL Databases</li>
-                        <li>Agile</li>
-                        <li>Ability to work in a team</li>
-                        <li>Github</li>
-                        <li>Design Patterns</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="padding-div-10 border-bottom"></div>
-            
-            
-        </div>
-        <div id="Education" class="container" >
-            
-            <div id="Skills" class="padding-div-10"></div>
-            <div class="row small-bottom-margin">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    
-                    <h1>Education</h1> 
-                    
-                </div>
-                <div class="row small-bottom-margin img-div-row">
-                    <div class="col-lg-10 col-md-10 d-none d-md-block">
-                        <p class="raleway-font">I completed my Bachelor's Degree in Computer Science at the University of Pretoria, one of the top instituitions in South Africa.
-                            This course covered a variety of topics, with courses ranging from Calculus to Compiler Construction with many modules covering various subjects and technologies.
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                        <img src="images/up.png" id="upLogo" class="img-responsive edu-logo mx-auto d-block" alt="">
-                        <div class="padding-10-mobile"></div>
-                    </div>
-                    <div class="d-block d-lg-none col-sm-12 col-xs-12">
-                        <p class="raleway-font">I completed my Bachelor's Degree in Computer Science at the University of Pretoria, one of the top instituitions in South Africa.
-                            This course covered a variety of topics, with courses ranging from Calculus to Compiler Construction with many modules covering various subjects and technologies.
-                        </p>
-                    </div>
+        </div> -->
+
+    <div id="Profile">
+
+        <div class="padding-navbar-mobile"></div>
+        <div class="container fullscreencontainer">
+
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-8 col-xs-8 offset-lg-0 offset-md-0 offset-sm-2 offset-xs-2">
+                    <img src="images/profile.jpg" id="pLogo" class="img-responsive rounded-circle float-left" alt="">
+
+                    <!-- <div class="padding-div-10"></div> -->
                 </div>
 
-                
-               
+                <div class="col-lg-10 col-md-8 col-sm-12 col-xs-12">
+                    <h1>Dylan Schwikkard</h1>
+                    <div class="p-statement">As a recent Computer Science graduate from university, I am looking to start my career in software development. I have experience in various languages and technologies and am eager to learn more. I have mostly worked with front end technologies but have also touch on back end.</div>
+                </div>
+
             </div>
-            <div class="padding-div-10 border-bottom"></div>
-            
-            
-            
+
         </div>
-        <div class="padding-div-20"></div>
+        <div class=" container padding-10-mobile border-bottom"></div>
 
+    </div>
+    <div id="Skills" class="container">
 
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="scripts.js"></script>
-    </body>
+        <div class="padding-div-10"></div>
+        <div class="row small-bottom-margin">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <h1>Skills</h1>
+                <div class="p-statement" style="padding-bottom: 10px;">These are a few of and what I consider my most valuable skills at this point in time.</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding">
+                <ul class="skills">
+                    <li>Angular</li>
+                    <li>Flutter</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>PHP</li>
+                    <li>Firebase</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding list-2">
+                <ul class="skills">
+                    <li>SQL Databases</li>
+                    <li>NoSQL Databases</li>
+                    <li>Agile</li>
+                    <li>Ability to work in a team</li>
+                    <li>Github</li>
+                    <li>Design Patterns</li>
+                </ul>
+            </div>
+        </div>
+        <div class="padding-div-10 border-bottom"></div>
+
+    </div>
+    <div id="Education" class="container">
+
+        <div class="padding-div-10"></div>
+        <div class="row small-bottom-margin">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <h1>Education</h1>
+
+            </div>
+            <div class="row small-bottom-margin img-div-row">
+                <div class="col-lg-10 col-md-10 d-none d-md-block">
+                    <p class="raleway-font">I completed my Bachelor's Degree in Computer Science at the University of Pretoria, one of the top instituitions in South Africa. This course covered a variety of topics, with courses ranging from Calculus to Compiler Construction with many modules covering various subjects and technologies.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+                    <img src="images/up.png" id="upLogo" class="img-responsive edu-logo mx-auto d-block" alt="">
+                    <div class="padding-10-mobile"></div>
+                </div>
+                <div class="d-block d-lg-none col-sm-12 col-xs-12">
+                    <p class="raleway-font">I completed my Bachelor's Degree in Computer Science at the University of Pretoria, one of the top instituitions in South Africa. This course covered a variety of topics, with courses ranging from Calculus to Compiler Construction with many modules covering various subjects and technologies.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="padding-div-10 border-bottom"></div>
+
+    </div>
+
+    <div id="Projects" class="container">
+
+        <div class="padding-div-10"></div>
+        <div class="row small-bottom-margin">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <h1>Projects</h1>
+                <p class="raleway-font">Below you can see some of the projects I have worked, including personal projects I've messed around with.</p>
+
+            </div>        
+
+        </div>
+        <div class="row">
+            <div id="pt1" class="project-tile col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div  class = "col-lg-2 col-md-2 col-sm-4 col-xs-4 p-logo-div">
+                    <img src="images/erp.png" id="pl1" class="img-responsive project-logo float-left" alt="">
+                </div>
+                <div id="protext1" class="col-lg-10 col-md-10 col-sm-8 col-xs-8 project-text">
+                    This is the description of my project. Pretty good, yes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit quis nisl eget varius. Integer lectus diam, scelerisque id nunc non, iaculis dapibus odio. Donec bibendum felis a risus vulputate, nec iaculis lacus porttitor. Nam sed tincidunt lectus, vel dictum est. In hac habitasse platea dictumst. Aliquam consequat metus tortor, vitae consectetur sem mattis at. Proin congue justo a nibh bibendum interdum ac nec quam. Duis placerat metus sit amet magna rhoncus, id maximus magna efficitur. Praesent egestas massa enim, eget consectetur nisi pulvinar eu. Suspendisse nec elementum orci. Phasellus eleifend ut nisl non pretium. Nullam convallis orci dui, sed feugiat eros feugiat consectetur. Praesent et rutrum urna.
+                </div>
+            </div>
+            <div id="pt2" class="project-tile col-lg-4 col-md-4 col-sm-4 col-xs-4" style="background-color:blue">
+                <div  class = "col-lg-4 col-md-12 col-sm-12 col-xs-12 p-logo-div">
+                    <img src="images/erp.png" id="pl2" class="img-responsive project-logo float-left" alt="">
+                </div>
+                <div id="protext2" class="col-lg-8 col-md-12 col-sm-12 col-xs-12 project-text">
+                    This is the description of my project. Pretty good, yes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit quis nisl eget varius. Integer lectus diam, scelerisque id nunc non, iaculis dapibus odio. Donec bibendum felis a risus vulputate, nec iaculis lacus porttitor. Nam sed tincidunt lectus, vel dictum est. In hac habitasse platea dictumst. Aliquam consequat metus tortor, vitae consectetur sem mattis at. Proin congue justo a nibh bibendum interdum ac nec quam. Duis placerat metus sit amet magna rhoncus, id maximus magna efficitur. Praesent egestas massa enim, eget consectetur nisi pulvinar eu. Suspendisse nec elementum orci. Phasellus eleifend ut nisl non pretium. Nullam convallis orci dui, sed feugiat eros feugiat consectetur. Praesent et rutrum urna.
+                </div>
+            </div>
+            <div id="pt3" class="project-tile col-lg-4 col-md-4 col-sm-4 col-xs-4" style="background-color:purple">
+                <div  class = "col-lg-2 col-md-2 col-sm-4 col-xs-4 p-logo-div">
+                    <img src="images/erp.png" id="pl3" class="img-responsive project-logo float-left" alt="">
+                </div>
+                <div id="protext3" class="col-lg-10 col-md-10 col-sm-8 col-xs-8 project-text">
+                    This is the description of my project. Pretty good, yes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer suscipit quis nisl eget varius. Integer lectus diam, scelerisque id nunc non, iaculis dapibus odio. Donec bibendum felis a risus vulputate, nec iaculis lacus porttitor. Nam sed tincidunt lectus, vel dictum est. In hac habitasse platea dictumst. Aliquam consequat metus tortor, vitae consectetur sem mattis at. Proin congue justo a nibh bibendum interdum ac nec quam. Duis placerat metus sit amet magna rhoncus, id maximus magna efficitur. Praesent egestas massa enim, eget consectetur nisi pulvinar eu. Suspendisse nec elementum orci. Phasellus eleifend ut nisl non pretium. Nullam convallis orci dui, sed feugiat eros feugiat consectetur. Praesent et rutrum urna.
+                </div>
+            </div>
+
+           
+        </div>
+        <div class="padding-div-10 border-bottom"></div>
+
+    </div>
+    <div class="padding-div-20"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
 </html>
