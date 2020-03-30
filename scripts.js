@@ -28,20 +28,20 @@ $(document).ready(function(){
 		 var i = id.substring(2);
 		 var mod = i % 3;
 		 
-		 if(mod == 1)
-		 {
-			if(screen.width < 768){
-				if (first == false){
-					doFirstMobile(i);
-				}
-				else{
-					undoFirstMobile(i);
-				}
-				
+		 if(screen.width < 768){
+			if (first == false){
+				doMobile(i);
+			}
+			else{
+				undoMobile(i);
 			}
 			
+		}
 
-			else if (first == false){				
+		 else if(mod == 1)
+		 {		
+			
+			if (first == false){				
 				doFirst(i);
 			}
 			else{
@@ -189,8 +189,8 @@ $(document).ready(function(){
 		},500);
 			
 			
-	
-		showOthers(id);
+		setTimeout(function() {
+		showOthers(id);},500);
 		
 		
 		setTimeout(function (){$('#pt' + id).removeClass('active-project');}, 0);
@@ -390,19 +390,19 @@ $(document).ready(function(){
 	});
 
 
-	function doFirstMobile(i){
+	function doMobile(i){
 		
 		 var id = Number(i);
 		 
 		 
 		
-		
+		$("html, body").animate({ scrollTop: ($('#pt' + id).offset().top-59) },500);
 		setTimeout(function (){$('#pt' + id).addClass('active-project');}, 700);
 		$('.project-text#protext'+i).addClass('visible-text');
 		setTimeout(function (){$('#pt' + id).addClass('row')}, 700);
 		first = true;
 	}
-	function undoFirstMobile(i){
+	function undoMobile(i){
 		var id = Number(i);
 		 
 		 
@@ -410,12 +410,15 @@ $(document).ready(function(){
 		
 		$('#pt' + id).removeClass('active-project');
 		
-		$('#pt' + id).removeClass('row');
-		setTimeout(function() { $('.project-text#protext'+i).removeClass('visible-text');  }, 500)
+		
+		setTimeout(function() { $('.project-text#protext'+i).removeClass('visible-text');
+								$('#pt' + id).removeClass('row');  }, 500)
 		$('#pt' + id).addClass('shrink-33');
 		setTimeout(function() { $('#pt' + id).removeClass('shrink-33')}, 500)
 		first = false;
 
 	}
+
+	
 	
 });
