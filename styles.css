@@ -348,7 +348,10 @@ h1{
 
 }
 @media (max-width: 768px){
-
+    .col-flex{
+        display: flex;
+        justify-content: center;
+   };
 
     .icon-link{
         margin-top: 10px;
@@ -382,8 +385,8 @@ h1{
         border-radius: 10px;
    }
     .rounded-circle{
-        max-width: 50%;
-        margin-left: 25%;
+        max-width: 100px;
+        
         margin-bottom: 15%;
         max-height: 100%;
         border: 2px solid black;
