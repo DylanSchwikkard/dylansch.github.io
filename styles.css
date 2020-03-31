@@ -159,6 +159,7 @@ h1{
     align-items: center;
     justify-content: center;
     z-index: 10;
+    visibility: hidden;
 }
 
 .edu-logo{
